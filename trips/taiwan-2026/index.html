@@ -4,96 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0d4e47">
-    <meta name="description" content="Taiwan 2026 family itinerary, activities, food ideas, maps and travel notes.">
-    <title>Taiwan 2026 · Family Trips</title>
+    <meta name="description" content="Taiwan 2026 family itinerary, accommodation, transport and booking status.">
+    <title>Taiwan 2026 | Family Trips</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="trip.css">
   </head>
   <body>
     <header class="trip-header">
-      <a class="back-link" href="../../"><span aria-hidden="true">←</span> Family Trips</a>
+      <a class="back-link" href="../../"><span aria-hidden="true">&larr;</span> Family Trips</a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="trip-nav">Menu</button>
-      <nav id="trip-nav" aria-label="Trip sections">
-        <a href="#itinerary">Itinerary</a>
-        <a href="#places">Places</a>
-        <a href="#food">Food passport</a>
-        <a href="#bookings">Bookings</a>
-      </nav>
+      <nav id="trip-nav" aria-label="Trip sections"><a href="#itinerary">Itinerary</a><a href="#places">Places</a><a href="#accommodation">Accommodation</a><a href="#transport">Transport</a><a href="#calendar">Booking calendar</a><a href="#progress">Progress</a></nav>
     </header>
-
     <main>
       <section class="trip-hero">
         <div class="trip-hero-copy">
-          <p class="eyebrow">21 November – 6 December 2026</p>
+          <p class="eyebrow">21 November - 6 December 2026</p>
           <h1>Taiwan, slowly.</h1>
-          <p>A 16-day family journey shaped around coastlines, cycling, local food, forests and enough free time for unexpected discoveries.</p>
-          <div class="hero-actions">
-            <a class="button" href="#itinerary">See the itinerary</a>
-            <a class="text-link" href="https://www.google.com/maps/dir/Taipei/Hualien/Chishang/Taitung/Tainan/Alishan/Taipei/" target="_blank" rel="noopener">Open route in Google Maps ↗</a>
-          </div>
+          <p>A relaxed family loop shaped around dramatic coastlines, rice valleys, easy cycling, historic streets, forests and breathing-gap afternoons.</p>
+          <div class="hero-actions"><a class="button" href="#itinerary">See the itinerary</a><a class="text-link" href="https://www.google.com/maps/dir/Banqiao+District,+New+Taipei+City/Hualien+City,+Hualien+County/Chishang+Township,+Taitung+County/Taitung+City,+Taitung+County/Tainan+City/Chiayi+City/Alishan+Township,+Chiayi+County/Taipei+City/" target="_blank" rel="noopener">Open route in Google Maps &#8599;</a></div>
         </div>
-        <div class="trip-stats" aria-label="Trip summary">
-          <div><strong>16</strong><span>days</span></div>
-          <div><strong>7</strong><span>bases</span></div>
-          <div><strong>4</strong><span>moving-by-rail days</span></div>
-        </div>
+        <div class="trip-stats" aria-label="Trip summary"><div><strong>16</strong><span>days</span></div><div><strong>8</strong><span>bases</span></div><div><strong>5</strong><span>rail legs</span></div></div>
       </section>
-
-      <section class="route-strip" aria-label="Trip route">
-        <span>Taipei</span><i>→</i><span>Hualien</span><i>→</i><span>Chishang</span><i>→</i><span>Taitung</span><i>→</i><span>Tainan</span><i>→</i><span>Alishan</span><i>→</i><span>Taipei</span>
+      <section class="route-strip" aria-label="Trip route"><span>Banqiao</span><i>&rarr;</i><span>Hualien</span><i>&rarr;</i><span>Chishang</span><i>&rarr;</i><span>Taitung</span><i>&rarr;</i><span>Tainan</span><i>&rarr;</i><span>Chiayi</span><i>&rarr;</i><span>Alishan</span><i>&rarr;</i><span>Taipei</span></section>
+      <section class="overview-map" aria-label="Taiwan route overview">
+        <div class="map-island" aria-hidden="true"><span class="map-stop stop-banqiao">Banqiao</span><span class="map-stop stop-hualien">Hualien</span><span class="map-stop stop-chishang">Chishang</span><span class="map-stop stop-taitung">Taitung</span><span class="map-stop stop-tainan">Tainan</span><span class="map-stop stop-chiayi">Chiayi</span><span class="map-stop stop-alishan">Alishan</span><span class="map-stop stop-taipei">Taipei</span></div>
+        <div><p class="eyebrow">Taiwan overview</p><h2>The family loop</h2><p>East-coast scenery first, then a gentle sweep west through Tainan and the Alishan forests before the final Taipei stay.</p></div>
       </section>
-
-      <section class="trip-section" id="itinerary">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Day by day</p>
-            <h2>The itinerary</h2>
-          </div>
-          <div class="legend">
-            <span><i class="dot dot-move"></i> Moving day</span>
-            <span><i class="dot dot-stay"></i> Stay day</span>
-          </div>
-        </div>
-        <div id="itinerary-list" class="timeline" aria-live="polite"></div>
-      </section>
-
-      <section class="trip-section" id="places">
-        <div class="section-heading section-heading-wrap">
-          <div>
-            <p class="eyebrow">Pick what suits the day</p>
-            <h2>Activities & places</h2>
-          </div>
-          <div id="place-filters" class="filters" aria-label="Filter places by destination"></div>
-        </div>
-        <div id="place-list" class="place-grid"></div>
-      </section>
-
-      <section class="trip-section split-section" id="food">
-        <div>
-          <p class="eyebrow">Family challenge</p>
-          <h2>Food passport</h2>
-          <p class="section-intro">Regional dishes and curious bites to look out for. These are ideas, not restaurant bookings.</p>
-        </div>
-        <div id="food-list" class="food-list"></div>
-      </section>
-
-      <section class="trip-section" id="bookings">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">What is fixed</p>
-            <h2>Bookings & stays</h2>
-          </div>
-        </div>
-        <div id="booking-list" class="booking-grid"></div>
-        <p class="placeholder-note"><strong>Tentative means tentative:</strong> proposed stays, routes and durations remain editable until confirmed. No final restaurant details have been invented.</p>
-      </section>
+      <section class="trip-section" id="itinerary"><div class="section-heading"><div><p class="eyebrow">Day by day</p><h2>The itinerary</h2></div><div class="legend"><span><i class="dot dot-move"></i> Moving day</span><span><i class="dot dot-stay"></i> Stay day</span></div></div><div id="itinerary-list" class="timeline" aria-live="polite"></div></section>
+      <section class="trip-section" id="places"><div class="section-heading section-heading-wrap"><div><p class="eyebrow">Pick what suits the day</p><h2>Activities &amp; places</h2></div><div id="place-filters" class="filters" aria-label="Filter places by destination"></div></div><div id="place-list" class="place-grid"></div></section>
+      <section class="trip-section" id="accommodation"><div class="section-heading"><div><p class="eyebrow">Where we are staying</p><h2>Accommodation</h2></div></div><div id="accommodation-list" class="booking-grid"></div></section>
+      <section class="trip-section" id="transport"><div class="section-heading"><div><p class="eyebrow">Linear flow</p><h2>Transport</h2></div></div><div id="transport-list" class="transport-list"></div></section>
+      <section class="trip-section" id="calendar"><div class="section-heading"><div><p class="eyebrow">Midnight Taiwan time</p><h2>Booking calendar</h2></div></div><div id="calendar-list" class="calendar-grid"></div></section>
+      <section class="trip-section" id="progress"><div class="section-heading"><div><p class="eyebrow">Phase 1 snapshot</p><h2>Planning progress</h2></div></div><div id="progress-summary" class="progress-summary"></div><div id="progress-list" class="progress-grid"></div></section>
     </main>
-
-    <footer>
-      <p>Family Trips · Taiwan 2026 · Planning version</p>
-    </footer>
-
-    <script src="data.js"></script>
-    <script src="../../scripts/app.js"></script>
+    <footer><p>Family Trips | Taiwan 2026 | Phase 1 planning refresh</p></footer>
+    <script src="data.js"></script><script src="../../scripts/app.js"></script>
   </body>
 </html>
