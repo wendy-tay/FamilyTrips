@@ -13,6 +13,30 @@
       <div class="day-details"><p class="activity-line"><strong>Plan:</strong> ${escapeHtml(day.plan)}</p><div class="travel-box"><strong>${escapeHtml(day.travel)}</strong>${escapeHtml(day.note)}</div></div>
     </div></article>`).join("");
 
+  const placeList = byId("place-list");
+  const filterWrap = byId("place-filters");
+  const locations = ["All", ...new Set(data.places.map((place) => place.location))];
+  let activeLocation = "All";
+  const tagClass = (type) => type === "weather" ? "tag tag-weather" : type === "tentative" ? "tag tag-tentative" : "tag";
+
+  function renderPlaces() {
+    const places = activeLocation === "All" ? data.places : data.places.filter((place) => place.location === activeLocation);
+    placeList.innerHTML = places.map((place) => `
+      <article class="place-card"><div class="place-card-top"><span class="place-icon" aria-hidden="true">${place.icon}</span><span class="${tagClass(place.type)}">${escapeHtml(place.status)}</span></div>
+      <h3>${escapeHtml(place.name)}</h3><p>${escapeHtml(place.description)}</p><div class="place-meta"><span><strong>When:</strong> ${escapeHtml(place.timing)}</span></div>
+      <div class="card-links"><a class="mini-link" href="${place.map}" target="_blank" rel="noopener">Google Maps ↗</a><span class="mini-link">${escapeHtml(place.location)}</span></div></article>`).join("");
+  }
+
+  filterWrap.innerHTML = locations.map((location, index) => `<button class="filter-button" type="button" data-location="${escapeHtml(location)}" aria-pressed="${index === 0}">${escapeHtml(location)}</button>`).join("");
+  filterWrap.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-location]");
+    if (!button) return;
+    activeLocation = button.dataset.location;
+    filterWrap.querySelectorAll("button").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+    renderPlaces();
+  });
+  renderPlaces();
+
   byId("accommodation-list").innerHTML = data.accommodation.map((stay) => `
     <article class="booking-card">${statusBadge(stay.status)}<h3>${escapeHtml(stay.location)}</h3><p><strong>${escapeHtml(stay.hotel)}</strong></p><p>${escapeHtml(stay.dates)}</p><p>${escapeHtml(stay.detail)}</p></article>`).join("");
 
@@ -25,8 +49,6 @@
   byId("calendar-list").innerHTML = data.calendar.map((item) => `
     <article class="calendar-card"><div class="calendar-date"><strong>${escapeHtml(item.date)}</strong><span>${escapeHtml(item.time)} Taiwan time</span></div><div><h3>${escapeHtml(item.action)}</h3><p>${escapeHtml(item.route)}</p></div></article>`).join("");
 
-  byId("regional-map-list").innerHTML = data.regionalMaps.map((item) => `
-    <article class="regional-map-card"><div class="regional-map-placeholder" aria-hidden="true"><span>Map coming next</span></div><div><span class="booking-status tentative">${escapeHtml(item.status)}</span><h3>${escapeHtml(item.region)}</h3><p>${escapeHtml(item.detail)}</p></div></article>`).join("");
 
   const menuButton = document.querySelector(".menu-button");
   const nav = byId("trip-nav");
