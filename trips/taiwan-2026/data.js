@@ -56,15 +56,17 @@ window.TRIP_DATA = {
     { title: "Zoo & Maokong", location: "Taipei", status: "Weather dependent", detail: "A full family day with a flexible gondola-and-tea finish." }
   ],
   transport: [
-    { route: "Airport → Banqiao", mode: "Taxi", time: "Travel time to confirm", status: "Planned" },
+    { route: "Airport → Banqiao", mode: "Local taxi", time: "Travel time to confirm", status: "Planned" },
     { route: "Banqiao → Xincheng", mode: "TRA express", time: "Timetable to confirm", status: "Ticket required" },
-    { route: "Xincheng → Hualien", mode: "Private hire via Qingshui Cliff and Qixingtan", time: "Full scenic transfer", status: "Planned" },
+    { route: "Hualien scenic route", mode: "Private hire for Qingshui Cliff, Taroko edge and Qixingtan", time: "22 Nov · full scenic transfer", status: "Driver required" },
     { route: "Hualien → Chishang", mode: "TRA express", time: "About 1.5 hours", status: "Ticket required" },
-    { route: "Chishang → Taitung", mode: "TRA", time: "About 35 minutes", status: "Planned" },
+    { route: "Chishang → Taitung", mode: "TRA, then local taxi as needed", time: "About 35 minutes by train", status: "Planned" },
+    { route: "Taitung local outings", mode: "Local taxi / public transport / electric canopy bike", time: "25–26 Nov", status: "Planned" },
     { route: "Taitung → Tainan", mode: "TRA", time: "Timetable to confirm", status: "Ticket required" },
-    { route: "Tainan → Xiding", mode: "TRA to Chiayi, then private transfer", time: "Travel time placeholder", status: "Confirm transfer" },
-    { route: "Xiding → Alishan", mode: "Private transfer", time: "Travel time placeholder", status: "Confirm transfer" },
-    { route: "Alishan → Taipei", mode: "Transfer to Chiayi, then rail north", time: "Travel time placeholder", status: "Confirm connection" }
+    { route: "Tainan local outings", mode: "Local taxi / public transport / walking", time: "27–29 Nov", status: "Planned" },
+    { route: "Xiding & Alishan area", mode: "Private hire or self-drive", time: "29 Nov–1 Dec", status: "Decision required" },
+    { route: "Alishan → Chiayi → Taipei", mode: "Road transfer to Chiayi, then rail north", time: "2 Dec · times to confirm", status: "Confirm connection" },
+    { route: "Taipei local travel", mode: "MRT / bus / local taxi / walking", time: "2–6 Dec", status: "Planned" }
   ],
   calendar: [
     { date: "26 Oct 2026", time: "00:00", action: "Book 22 Nov TRA", route: "Banqiao → Xincheng" },
