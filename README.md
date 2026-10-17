@@ -6,16 +6,18 @@ A mobile-first, plain HTML/CSS/JavaScript home for family travel plans.
 
 - **Taiwan 2026:** `trips/taiwan-2026/`
 - Dates: 21 November–6 December 2026
-- Status: planning
+- Status: final planning
+- Route: Banqiao → Hualien → Chishang → Taitung → Tainan → Xiding → Alishan → Taipei
 
 The Taiwan page includes:
 
-- a day-by-day itinerary with moving days clearly marked;
-- destination-filtered activity cards;
-- Google Maps search/direction links;
-- accommodation, travel-time and booking placeholders;
-- a family food passport;
-- confirmed versus tentative booking labels.
+- a 16-day itinerary with moving and stay days;
+- a full-loop Google Maps link;
+- destination-filtered activity cards with individual map links;
+- confirmed and pending accommodation;
+- transport notes and travel-time placeholders;
+- a train ticket-booking calendar;
+- current trip highlights.
 
 ## Reusable structure
 
@@ -32,14 +34,8 @@ FamilyTrips/
         └── data.js
 ```
 
-To add another trip:
-
-1. Copy `trips/taiwan-2026/` to a new trip folder.
-2. Replace the content in that trip's `data.js`.
-3. Add a new trip card to the root `index.html`.
-
 ## Editing the Taiwan plan
 
-Most trip content lives in `trips/taiwan-2026/data.js`. Update the itinerary, places, food and booking arrays there. The page renders the cards automatically.
+Most trip content lives in `trips/taiwan-2026/data.js`. Update the itinerary, places, accommodation, highlights, transport and booking-calendar arrays there.
 
-Unconfirmed hotels, restaurants, operators, timings and travel estimates should remain clearly labelled **Tentative**, **TBD** or **verify** until confirmed.
+Unconfirmed hotels, operators, timings and travel estimates should remain clearly labelled **Pending**, **Weather dependent**, **TBD** or **confirm** until booked.
