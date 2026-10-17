@@ -17,6 +17,26 @@ window.TRIP_DATA = {
     { day: 15, date: "Sat, 5 Dec", stay: "Taipei", moving: false, title: "Friends and free time", plan: "Shopping, meetups and a generous unplanned block for discoveries or rest.", travel: "MRT / walking", note: "Keep the final full day light." },
     { day: 16, date: "Sun, 6 Dec", stay: "Home", moving: true, title: "Homeward", plan: "Enjoy a final slow morning, then transfer to the airport for the evening flight home.", travel: "Taipei → TPE → Singapore", note: "Allow ample airport time." }
   ],
+  places: [
+    { location: "Hualien", icon: "⛰️", name: "Qingshui Cliff", status: "Must-do", type: "outdoor", description: "Dramatic vertical cliffs and Pacific views during the private-driver transfer from Xincheng.", timing: "22 Nov · coastal drive", map: "https://www.google.com/maps/search/?api=1&query=Qingshui+Cliff+Hualien" },
+    { location: "Hualien", icon: "🌊", name: "Qixingtan Beach", status: "Must-do", type: "outdoor", description: "A broad pebble beach for ocean views, a gentle stroll and pebble stacking.", timing: "22 Nov · coastal drive", map: "https://www.google.com/maps/search/?api=1&query=Qixingtan+Beach+Hualien" },
+    { location: "Hualien", icon: "🐬", name: "Whale & dolphin watching", status: "Weather dependent", type: "weather", description: "An early harbour tour followed by a fresh seafood lunch, subject to sea conditions.", timing: "23 Nov · morning", map: "https://www.google.com/maps/search/?api=1&query=Hualien+whale+dolphin+watching" },
+    { location: "Hualien", icon: "🚲", name: "Coastal cycle path", status: "Optional", type: "tentative", description: "A relaxed ride outside Kadda Hotel, with a nap as the equally valid alternative.", timing: "23 Nov · afternoon", map: "https://www.google.com/maps/search/?api=1&query=Hualien+Pacific+Park+bike+path" },
+    { location: "Hualien", icon: "🏮", name: "Dongdamen Night Market", status: "Planned", type: "food", description: "An easy evening browse for local snacks after the coastal afternoon.", timing: "23 Nov · evening", map: "https://www.google.com/maps/search/?api=1&query=Dongdamen+Night+Market" },
+    { location: "Chishang", icon: "🚲", name: "Mr. Brown Avenue", status: "Must-do", type: "outdoor", description: "Golden-hour rice-field cycling in a four-seater electric canopy bike.", timing: "24 Nov · golden hour", map: "https://www.google.com/maps/search/?api=1&query=Brown+Boulevard+Chishang" },
+    { location: "Taitung", icon: "🐄", name: "Chulu Ranch", status: "Planned", type: "outdoor", description: "Feed the cows, enjoy the open grassland and stop for milk ice cream.", timing: "25 Nov · afternoon", map: "https://www.google.com/maps/search/?api=1&query=Chulu+Ranch+Taitung" },
+    { location: "Taitung", icon: "🍈", name: "Custard-apple orchard", status: "Season dependent", type: "weather", description: "A fruit-picking stop on the ranch return, subject to harvest and orchard availability.", timing: "25 Nov · return drive", map: "https://www.google.com/maps/search/?api=1&query=Taitung+custard+apple+farm" },
+    { location: "Taitung", icon: "🎨", name: "Tiehua village", status: "Planned", type: "outdoor", description: "A relaxed evening walk among lanterns, music and creative spaces.", timing: "25 Nov · evening", map: "https://www.google.com/maps/search/?api=1&query=Tiehua+Music+Village+Taitung" },
+    { location: "Taitung", icon: "🪨", name: "Xiaoyeliu", status: "Must-do", type: "outdoor", description: "A compact coastal stop known for unusual sandstone rock formations.", timing: "26 Nov · morning", map: "https://www.google.com/maps/search/?api=1&query=Xiaoyeliu+Taitung" },
+    { location: "Taitung", icon: "🐟", name: "Fushan Fish Reserve", status: "Planned", type: "outdoor", description: "A calm shoreline reserve paired naturally with Xiaoyeliu and Fugang Harbor.", timing: "26 Nov · morning", map: "https://www.google.com/maps/search/?api=1&query=Fushan+Fish+Reserve+Taitung" },
+    { location: "Taitung", icon: "🌲", name: "Taitung Forest Park & Pipa Lake", status: "Must-do", type: "outdoor", description: "A flat, shaded electric-canopy-bike ride through the forest park to peaceful Pipa Lake.", timing: "26 Nov · afternoon", map: "https://www.google.com/maps/search/?api=1&query=Taitung+Forest+Park+Pipa+Lake" },
+    { location: "Tainan", icon: "🏮", name: "Shennong Street", status: "Planned", type: "outdoor", description: "A low-key dusk walk along one of Tainan's characterful historic streets.", timing: "27 Nov · evening", map: "https://www.google.com/maps/search/?api=1&query=Shennong+Street+Tainan" },
+    { location: "Tainan", icon: "🛶", name: "Sicao Green Tunnel", status: "Must-do", type: "outdoor", description: "Take the first mangrove boat of the day for cooler air and lighter crowds.", timing: "28 Nov · early morning", map: "https://www.google.com/maps/search/?api=1&query=Sicao+Green+Tunnel+Tainan" },
+    { location: "Tainan", icon: "🌳", name: "Anping Tree House", status: "Planned", type: "outdoor", description: "Explore the banyan-covered warehouse before an Anping shrimp-roll lunch.", timing: "28 Nov · late morning", map: "https://www.google.com/maps/search/?api=1&query=Anping+Tree+House" },
+    { location: "Xiding", icon: "🌄", name: "Eryanping & Xiding Lookout", status: "Planned", type: "outdoor", description: "Tea-mountain scenery and a sunset opportunity during the single SunSweet night.", timing: "29 Nov · sunset", map: "https://www.google.com/maps/search/?api=1&query=Eryanping+Trail+Xiding" },
+    { location: "Alishan", icon: "🌲", name: "Alishan forest trails", status: "Must-do", type: "outdoor", description: "Giant trees, short trails and forest-railway moments at a relaxed family pace.", timing: "30 Nov–1 Dec", map: "https://www.google.com/maps/search/?api=1&query=Alishan+National+Forest+Recreation+Area" },
+    { location: "Taipei", icon: "🐼", name: "Taipei Zoo & Maokong", status: "Weather dependent", type: "weather", description: "A full family day with the gondola and tea finish adjusted for weather and maintenance.", timing: "4 Dec · full day", map: "https://www.google.com/maps/search/?api=1&query=Taipei+Zoo+Maokong+Gondola" }
+  ],
   accommodation: [
     { location: "Banqiao", hotel: "Boutech Hotel", dates: "21–22 Nov · 1 night", status: "Confirmed", detail: "Arrival-night base." },
     { location: "Hualien", hotel: "Kadda Hotel", dates: "22–24 Nov · 2 nights", status: "Confirmed", detail: "Coast and whale-watching base." },
@@ -53,12 +73,5 @@ window.TRIP_DATA = {
     { date: "30 Oct 2026", time: "00:00", action: "Book 27 Nov TRA", route: "Taitung → Tainan · prefer ocean-view seats" },
     { date: "2 Nov 2026", time: "00:00", action: "Book 29 Nov TRA", route: "Tainan → Chiayi" },
     { date: "5 Nov 2026", time: "00:00", action: "Book 2 Dec northbound rail", route: "Chiayi → Taipei" }
-  ],
-  regionalMaps: [
-    { region: "Hualien coast", detail: "Qingshui Cliff · Qixingtan · whale-watching harbour", status: "Map placeholder" },
-    { region: "Chishang & Taitung", detail: "Brown Avenue · Chulu Ranch · Xiaoyeliu · Fushan · Taitung Forest Park", status: "Map placeholder" },
-    { region: "Tainan", detail: "Sicao Green Tunnel · Anping · Shennong Street", status: "Map placeholder" },
-    { region: "Xiding & Alishan", detail: "SunSweet House · Xiding Lookout · Eryanping · ChinShan Villa · forest area", status: "Map placeholder" },
-    { region: "Taipei", detail: "Final hotel · Taipei Zoo · Maokong · shopping and meetup areas", status: "Map placeholder" }
   ]
 };
