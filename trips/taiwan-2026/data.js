@@ -1,9 +1,9 @@
 window.TRIP_DATA = {
   itinerary: [
     { day: 1, date: "Sat, 21 Nov", stay: "Banqiao", moving: true, title: "Arrival and unwind", plan: "Arrive in Taipei, take a taxi to Banqiao and settle in. Relax and set a reminder to pre-order train bentos in the TRA app.", travel: "Airport → Banqiao · taxi", note: "Keep the evening free." },
-    { day: 2, date: "Sun, 22 Nov", stay: "Hualien", moving: true, title: "The coastal drive", plan: "Take the train to Xincheng. Meet the private driver for Qingshui Cliff, a scenic Taroko-edge drive and pebble stacking at Qixingtan Beach.", travel: "TRA · Banqiao → Xincheng", note: "Continue by private hire to Hualien." },
+    { day: 2, date: "Sun, 22 Nov", stay: "Hualien", moving: true, title: "The coastal drive", plan: "Take TRA Tze-Chiang #270 through to Hualien Station and collect a pre-booked rental car nearby. Drive north with Qingshui Cliff as the priority, add one accessible Taroko-edge viewpoint only if daylight and road access allow, then stop at Qixingtan on the return to Hualien City.", travel: "TRA #270 · Banqiao 09:47 → Hualien 12:53 · self-drive", note: "A realistic half-day: Qingshui first, Taroko optional and Qixingtan on the way to Kadda Hotel." },
     { day: 3, date: "Mon, 23 Nov", stay: "Hualien", moving: false, title: "Dolphins and bikes", plan: "Sunrise, a whale-and-dolphin-watching tour and harbour seafood lunch. Cycle the coastal path—or nap—then visit Dongdamen Night Market.", travel: "Local tour / bicycle / walking", note: "Sailing is weather and sea-condition dependent." },
-    { day: 4, date: "Tue, 24 Nov", stay: "Chishang", moving: true, title: "Golden harvest slowdown", plan: "Travel south, rent a four-seater electric canopy bike and ride Mr. Brown Avenue during golden hour. Stargaze and enjoy a slow evening.", travel: "TRA · Hualien → Chishang · about 1.5 hrs", note: "A slow afternoon in rice country." },
+    { day: 4, date: "Tue, 24 Nov", stay: "Chishang", moving: true, title: "Golden harvest slowdown", plan: "Return the rental car near Hualien Station by about 10:00, then take TRA EMU3000 #472 to Chishang. Rent a four-seater electric canopy bike and ride Mr. Brown Avenue during golden hour.", travel: "TRA #472 · Hualien 11:10 → Chishang 12:31", note: "Allow at least one hour between returning the car and boarding the train." },
     { day: 5, date: "Wed, 25 Nov", stay: "Taitung", moving: true, title: "Animals and art", plan: "Take the short train south. Visit Chulu Ranch for cow feeding and milk ice cream; stop for custard-apple picking if available. Walk around Tiehua in the evening.", travel: "TRA · Chishang → Taitung · about 35 mins", note: "Use a local taxi for the ranch loop." },
     { day: 6, date: "Thu, 26 Nov", stay: "Taitung", moving: false, title: "Rocks, forest and a breathing gap", plan: "Morning at Xiaoyeliu and Fushan Fish Reserve, then seafood near Fugang Harbor. Ride through Taitung Forest Park to Pipa Lake.", travel: "Local taxi / electric canopy bike", note: "Flat, shaded and easy-paced." },
     { day: 7, date: "Fri, 27 Nov", stay: "Tainan", moving: true, title: "The ocean rail", plan: "Take the scenic afternoon train west. Settle in, then enjoy a Shennong Street dusk walk and relaxed dinner.", travel: "TRA · Taitung → Tainan", note: "Choose ocean-view seats if available." },
@@ -18,7 +18,7 @@ window.TRIP_DATA = {
     { day: 16, date: "Sun, 6 Dec", stay: "Home", moving: true, title: "Homeward", plan: "Enjoy a final slow morning, then transfer to the airport for the evening flight home.", travel: "Taipei → TPE → Singapore", note: "Allow ample airport time." }
   ],
   places: [
-    { location: "Hualien", icon: "⛰️", name: "Qingshui Cliff", status: "Must-do", type: "outdoor", description: "Dramatic vertical cliffs and Pacific views during the private-driver transfer from Xincheng.", timing: "22 Nov · coastal drive", map: "https://www.google.com/maps/search/?api=1&query=Qingshui+Cliff+Hualien" },
+    { location: "Hualien", icon: "⛰️", name: "Qingshui Cliff", status: "Must-do", type: "outdoor", description: "The priority stop on the self-drive afternoon, with dramatic vertical cliffs and Pacific views.", timing: "22 Nov · self-drive", map: "https://www.google.com/maps/search/?api=1&query=Qingshui+Cliff+Hualien" },
     { location: "Hualien", icon: "🌊", name: "Qixingtan Beach", status: "Must-do", type: "outdoor", description: "A broad pebble beach for ocean views, a gentle stroll and pebble stacking.", timing: "22 Nov · coastal drive", map: "https://www.google.com/maps/search/?api=1&query=Qixingtan+Beach+Hualien" },
     { location: "Hualien", icon: "🐬", name: "Whale & dolphin watching", status: "Weather dependent", type: "weather", description: "An early harbour tour followed by a fresh seafood lunch, subject to sea conditions.", timing: "23 Nov · morning", map: "https://www.google.com/maps/search/?api=1&query=Hualien+whale+dolphin+watching" },
     { location: "Hualien", icon: "🚲", name: "Coastal cycle path", status: "Optional", type: "tentative", description: "A relaxed ride outside Kadda Hotel, with a nap as the equally valid alternative.", timing: "23 Nov · afternoon", map: "https://www.google.com/maps/search/?api=1&query=Hualien+Pacific+Park+bike+path" },
@@ -57,9 +57,9 @@ window.TRIP_DATA = {
   ],
   transport: [
     { route: "Airport → Banqiao", mode: "Taxi", time: "Travel time to confirm", status: "Planned" },
-    { route: "Banqiao → Xincheng", mode: "TRA express", time: "Timetable to confirm", status: "Ticket required" },
-    { route: "Xincheng → Hualien", mode: "Private hire via Qingshui Cliff and Qixingtan", time: "Full scenic transfer", status: "Planned" },
-    { route: "Hualien → Chishang", mode: "TRA express", time: "About 1.5 hours", status: "Ticket required" },
+    { route: "Banqiao → Hualien", mode: "TRA Tze-Chiang #270", time: "09:47 → 12:53", status: "Book 23 Oct" },
+    { route: "Hualien coastal loop", mode: "Rental car · Qingshui priority, Taroko optional, Qixingtan return stop", time: "22–24 Nov", status: "Rental pending" },
+    { route: "Hualien → Chishang", mode: "TRA EMU3000 #472", time: "11:10 → 12:31", status: "Book 27 Oct" },
     { route: "Chishang → Taitung", mode: "TRA", time: "About 35 minutes", status: "Planned" },
     { route: "Taitung → Tainan", mode: "TRA", time: "Timetable to confirm", status: "Ticket required" },
     { route: "Tainan → Xiding", mode: "TRA to Chiayi, then private transfer", time: "Travel time placeholder", status: "Confirm transfer" },
@@ -67,8 +67,8 @@ window.TRIP_DATA = {
     { route: "Alishan → Taipei", mode: "Transfer to Chiayi, then rail north", time: "Travel time placeholder", status: "Confirm connection" }
   ],
   calendar: [
-    { date: "26 Oct 2026", time: "00:00", action: "Book 22 Nov TRA", route: "Banqiao → Xincheng" },
-    { date: "27 Oct 2026", time: "00:00", action: "Book 24 Nov TRA", route: "Hualien → Chishang" },
+    { date: "23 Oct 2026", time: "00:00", action: "Book 22 Nov TRA #270", route: "Banqiao 09:47 → Hualien 12:53" },
+    { date: "27 Oct 2026", time: "00:00", action: "Book 24 Nov TRA #472", route: "Hualien 11:10 → Chishang 12:31" },
     { date: "28 Oct 2026", time: "00:00", action: "Book 25 Nov TRA", route: "Chishang → Taitung" },
     { date: "30 Oct 2026", time: "00:00", action: "Book 27 Nov TRA", route: "Taitung → Tainan · prefer ocean-view seats" },
     { date: "2 Nov 2026", time: "00:00", action: "Book 29 Nov TRA", route: "Tainan → Chiayi" },
