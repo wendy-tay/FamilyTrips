@@ -224,6 +224,73 @@
 }
 .travel-box strong { display: block; margin-bottom: 3px; color: var(--ink); }
 
+.day-guide {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fbfcfa;
+  overflow: hidden;
+}
+
+.day-guide summary {
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--teal-dark);
+  cursor: pointer;
+  font-size: .82rem;
+  font-weight: 850;
+  list-style-position: inside;
+}
+
+.day-guide summary:hover { background: var(--mint); }
+.day-guide summary span { color: var(--muted); font-size: .7rem; font-weight: 700; }
+.day-guide[open] summary { border-bottom: 1px solid var(--line); background: var(--mint); }
+
+.day-guide-body { padding: 8px 15px 15px; }
+.day-guide-body ol { margin: 0; padding: 0; list-style: none; }
+.day-guide-option {
+  padding: 13px 0;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  border-bottom: 1px solid rgba(23, 50, 45, .08);
+}
+.day-guide-option:last-child { border-bottom: 0; }
+.day-guide-number {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: var(--teal);
+  font-size: .72rem;
+  font-weight: 850;
+}
+.day-guide-option h4 { margin: 1px 0 5px; font-size: .88rem; }
+.day-guide-option h4 span { color: var(--muted); font-weight: 650; }
+.day-guide-option p { margin: 0; color: var(--muted); font-size: .8rem; }
+.day-guide-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.day-guide-links a {
+  color: var(--teal);
+  font-size: .74rem;
+  font-weight: 800;
+  text-underline-offset: 3px;
+}
+.day-guide-advice {
+  margin: 8px 0 0;
+  padding: 11px 12px;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  color: var(--muted);
+  background: #fff8e9;
+  font-size: .78rem;
+}
+.day-guide-advice strong { color: var(--ink); }
+
 .filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .filter-button {
   min-height: 40px;
