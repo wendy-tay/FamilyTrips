@@ -6,9 +6,8 @@
   const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[character]);
   const statusClass = (status) => ["Pending", "Weather dependent"].includes(status) ? "tentative" : "";
   const statusBadge = (status) => `<span class="booking-status ${statusClass(status)}">${escapeHtml(status)}</span>`;
-  const renderDayGuide = (day) => {
-    if (!day.lunchGuide) return "";
-    const options = day.lunchGuide.options.map((option, index) => `
+  const renderGuide = (guide) => {
+    const options = guide.options.map((option, index) => `
       <li class="day-guide-option">
         <div class="day-guide-number">${index + 1}</div>
         <div>
@@ -16,25 +15,27 @@
           <p>${escapeHtml(option.description)}</p>
           <div class="day-guide-links">
             <a href="${escapeHtml(option.map)}" target="_blank" rel="noopener">Google Maps ↗</a>
-            ${option.info ? `<a href="${escapeHtml(option.info)}" target="_blank" rel="noopener">Restaurant information ↗</a>` : ""}
+            ${option.info ? `<a href="${escapeHtml(option.info)}" target="_blank" rel="noopener">More information ↗</a>` : ""}
           </div>
         </div>
       </li>`).join("");
     return `
       <details class="day-guide">
-        <summary>${escapeHtml(day.lunchGuide.title)}<span>View recommendations</span></summary>
+        <summary>${escapeHtml(guide.title)}<span>View recommendations</span></summary>
         <div class="day-guide-body">
           <ol>${options}</ol>
-          <p class="day-guide-advice"><strong>Timing advice:</strong> ${escapeHtml(day.lunchGuide.advice)}</p>
+          <p class="day-guide-advice"><strong>Recommendation:</strong> ${escapeHtml(guide.advice)}</p>
         </div>
       </details>`;
   };
+  const renderDayGuides = (day) => [day.lunchGuide, day.dinnerGuide].filter(Boolean).map(renderGuide).join("");
+
 
   byId("itinerary-list").innerHTML = data.itinerary.map((day) => `
     <article class="day-card"><div class="day-index">Day<strong>${day.day}</strong></div><div class="day-main">
       <div class="day-topline"><div><h3>${escapeHtml(day.title)} · ${escapeHtml(day.stay)}</h3><p class="day-date">${escapeHtml(day.date)}</p></div><span class="move-badge ${day.moving ? "" : "stay-badge"}">${day.moving ? "Moving day" : "Stay day"}</span></div>
       <div class="day-details"><p class="activity-line"><strong>Plan:</strong> ${escapeHtml(day.plan)}</p><div class="travel-box"><strong>${escapeHtml(day.travel)}</strong>${escapeHtml(day.note)}</div></div>
-      ${renderDayGuide(day)}
+      ${renderDayGuides(day)}
     </div></article>`).join("");
 
   const placeList = byId("place-list");
