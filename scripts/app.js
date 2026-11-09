@@ -21,14 +21,14 @@
       </li>`).join("");
     return `
       <details class="day-guide">
-        <summary>${escapeHtml(guide.title)}<span>View recommendations</span></summary>
+        <summary>${escapeHtml(guide.title)}<span>${escapeHtml(guide.summaryLabel || "View recommendations")}</span></summary>
         <div class="day-guide-body">
           <ol>${options}</ol>
-          <p class="day-guide-advice"><strong>Recommendation:</strong> ${escapeHtml(guide.advice)}</p>
+          <p class="day-guide-advice"><strong>${escapeHtml(guide.adviceLabel || "Recommendation")}:</strong> ${escapeHtml(guide.advice)}</p>
         </div>
       </details>`;
   };
-  const renderDayGuides = (day) => [day.lunchGuide, day.dinnerGuide].filter(Boolean).map(renderGuide).join("");
+  const renderDayGuides = (day) => [day.lunchGuide, day.dinnerGuide, ...(day.optionGuides || [])].filter(Boolean).map(renderGuide).join("");
 
 
   byId("itinerary-list").innerHTML = data.itinerary.map((day) => `
@@ -80,3 +80,4 @@
   menuButton.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuButton.setAttribute("aria-expanded", String(open)); });
   nav.addEventListener("click", () => { nav.classList.remove("open"); menuButton.setAttribute("aria-expanded", "false"); });
 })();
+
