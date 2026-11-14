@@ -7,6 +7,13 @@
   const statusClass = (status) => ["Pending", "Weather dependent"].includes(status) ? "tentative" : "";
   const statusBadge = (status) => `<span class="booking-status ${statusClass(status)}">${escapeHtml(status)}</span>`;
   const renderGuide = (guide) => {
+    const comparison = guide.comparison ? `
+      <div class="day-guide-table-wrap">
+        <table class="day-guide-table">
+          <thead><tr>${guide.comparison.headers.map((header) => `<th scope="col">${escapeHtml(header)}</th>`).join("")}</tr></thead>
+          <tbody>${guide.comparison.rows.map((row) => `<tr>${row.map((cell, index) => index === 0 ? `<th scope="row">${escapeHtml(cell)}</th>` : `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("")}</tbody>
+        </table>
+      </div>` : "";
     const options = guide.options.map((option, index) => `
       <li class="day-guide-option">
         <div class="day-guide-number">${index + 1}</div>
@@ -23,6 +30,7 @@
       <details class="day-guide">
         <summary>${escapeHtml(guide.title)}<span>${escapeHtml(guide.summaryLabel || "View recommendations")}</span></summary>
         <div class="day-guide-body">
+          ${comparison}
           <ol>${options}</ol>
           <p class="day-guide-advice"><strong>${escapeHtml(guide.adviceLabel || "Recommendation")}:</strong> ${escapeHtml(guide.advice)}</p>
         </div>
@@ -80,4 +88,5 @@
   menuButton.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuButton.setAttribute("aria-expanded", String(open)); });
   nav.addEventListener("click", () => { nav.classList.remove("open"); menuButton.setAttribute("aria-expanded", "false"); });
 })();
+
 
