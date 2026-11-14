@@ -483,6 +483,12 @@
   .regional-map-grid { grid-template-columns: 1fr; }
 }
 
+.day-guide-table-wrap { overflow-x: auto; margin-bottom: 1rem; }
+.day-guide-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .9rem; line-height: 1.45; }
+.day-guide-table th, .day-guide-table td { padding: .75rem; border: 1px solid rgba(13, 78, 71, .16); text-align: left; vertical-align: top; }
+.day-guide-table thead th { background: #e4f1ed; color: #0d4e47; }
+.day-guide-table tbody th { width: 20%; background: #f8f5ed; color: #173f39; }
+
 @media (max-width: 660px) {
   .menu-button { display: block; }
   .trip-header { flex-wrap: wrap; }
@@ -511,3 +517,4 @@
   .regional-map-card { grid-template-columns: 1fr; }
   .regional-map-placeholder { min-height: 120px; }
 }
+
