@@ -371,6 +371,22 @@
   text-decoration: none;
 }
 
+.teen-hero { padding-bottom: 48px; }
+.teen-intro { max-width: 760px; color: var(--muted); font-size: 1.02rem; }
+.teen-city-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.teen-city-nav a { padding: 9px 13px; border-radius: 999px; color: var(--teal); background: var(--mint); font-size: .82rem; font-weight: 850; text-decoration: none; }
+.teen-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.teen-card { padding: 22px; border: 1px solid rgba(23, 50, 45, .09); border-radius: 19px; background: var(--surface); }
+.teen-card h3 { margin: 12px 0 7px; font-size: 1.06rem; }
+.teen-card p { color: var(--muted); font-size: .88rem; }
+.teen-card .tag { display: inline-block; }
+.teen-distance { color: var(--teal-dark); font-size: .78rem; font-weight: 850; }
+.teen-note { margin-top: 18px; padding: 18px 20px; border-radius: 16px; color: var(--teal-dark); background: var(--mint); }
+.teen-route { display: grid; gap: 10px; margin-top: 20px; }
+.teen-route-step { padding: 14px 16px; border-left: 4px solid var(--teal); border-radius: 0 12px 12px 0; background: var(--surface); }
+.teen-route-step strong { display: block; margin-bottom: 3px; }
+.coming-soon { border-style: dashed; background: rgba(255,255,255,.55); }
+
 .split-section {
   display: grid;
   grid-template-columns: .7fr 1.3fr;
@@ -510,7 +526,7 @@
   .day-main { padding: 16px 14px; }
   .day-topline { align-items: flex-start; }
   .day-details { grid-template-columns: 1fr; }
-  .place-grid, .booking-grid, .food-list { grid-template-columns: 1fr; }
+  .place-grid, .booking-grid, .food-list, .teen-grid { grid-template-columns: 1fr; }
   .calendar-grid { grid-template-columns: 1fr; }
   .transport-card { grid-template-columns: 38px minmax(0, 1fr); }
   .transport-status { grid-column: 2; }
