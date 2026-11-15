@@ -21,7 +21,7 @@
           <h4>${escapeHtml(option.name)} <span>— ${escapeHtml(option.label)}</span></h4>
           <p>${escapeHtml(option.description)}</p>
           <div class="day-guide-links">
-            <a href="${escapeHtml(option.map)}" target="_blank" rel="noopener">Google Maps ↗</a>
+            ${option.map ? `<a href="${escapeHtml(option.map)}" target="_blank" rel="noopener">Google Maps ↗</a>` : ""}
             ${option.info ? `<a href="${escapeHtml(option.info)}" target="_blank" rel="noopener">More information ↗</a>` : ""}
           </div>
         </div>
@@ -88,5 +88,4 @@
   menuButton.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuButton.setAttribute("aria-expanded", String(open)); });
   nav.addEventListener("click", () => { nav.classList.remove("open"); menuButton.setAttribute("aria-expanded", "false"); });
 })();
-
 
