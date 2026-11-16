@@ -224,6 +224,20 @@
 }
 .travel-box strong { display: block; margin-bottom: 3px; color: var(--ink); }
 
+.morning-timing {
+  margin-top: 14px;
+  padding: 13px 15px;
+  border: 1px solid rgba(217, 155, 57, .38);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff9ea, #fffdf7);
+}
+.morning-timing-title { display: flex; align-items: center; gap: 7px; color: var(--ink); font-size: .83rem; }
+.morning-timing-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-top: 10px; }
+.morning-timing-facts span { padding: 8px 10px; border-radius: 10px; background: rgba(255, 255, 255, .82); }
+.morning-timing-facts small { display: block; margin-bottom: 2px; color: var(--muted); font-size: .66rem; font-weight: 750; text-transform: uppercase; letter-spacing: .04em; }
+.morning-timing-facts strong { color: var(--teal-dark); font-size: .9rem; }
+.morning-timing p { margin: 9px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.5; }
+
 .day-guide {
   margin-top: 14px;
   border: 1px solid var(--line);
@@ -592,3 +606,4 @@
   .emergency-number-grid, .stay-directory, .safety-steps, .safety-grid, .tsunami-layout, .family-plan-grid { grid-template-columns: 1fr; }
   .language-card { align-items: flex-start; flex-direction: column; }
 }
+
