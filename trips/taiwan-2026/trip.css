@@ -387,6 +387,62 @@
 .teen-route-step strong { display: block; margin-bottom: 3px; }
 .coming-soon { border-style: dashed; background: rgba(255,255,255,.55); }
 
+.emergency-hero { align-items: center; }
+.emergency-rule { padding: 24px; border-radius: 22px; color: white; background: var(--teal-dark); box-shadow: var(--shadow); }
+.emergency-rule span { display: block; margin-bottom: 18px; color: #b7dbce; font-size: .72rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.emergency-rule strong { display: block; margin-bottom: 10px; font-family: Georgia, serif; font-size: 1.55rem; font-weight: 500; line-height: 1.15; }
+.emergency-rule p { margin: 0; color: #e4f1ed; font-size: .9rem; }
+.emergency-number-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.emergency-number { padding: 18px 20px; display: grid; gap: 3px; border: 1px solid rgba(23,50,45,.09); border-radius: 17px; color: var(--ink); background: white; text-decoration: none; }
+.emergency-number:hover { border-color: var(--teal); }
+.emergency-number span { color: var(--muted); font-size: .74rem; font-weight: 750; }
+.emergency-number strong { color: var(--teal-dark); font-size: 1.35rem; }
+.emergency-number small { color: var(--muted); }
+.emergency-number-primary { color: white; background: var(--teal-dark); }
+.emergency-number-primary span, .emergency-number-primary small { color: #dcefe8; }
+.emergency-number-primary strong { color: white; font-size: 2rem; }
+.language-card { margin-top: 16px; padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; gap: 18px; border-left: 4px solid var(--gold); border-radius: 0 15px 15px 0; background: #fff8e9; }
+.language-card p { margin: 0; }
+.copy-button { flex: 0 0 auto; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--teal); background: white; font-weight: 800; }
+.stay-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.stay-address { padding: 22px; border: 1px solid rgba(23,50,45,.09); border-radius: 19px; background: white; }
+.stay-date { margin-bottom: 12px; color: var(--teal); font-size: .72rem; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; }
+.stay-address h3 { margin-bottom: 2px; }
+.stay-name-zh { margin-bottom: 16px; color: var(--muted); font-weight: 750; }
+.stay-address address { color: var(--muted); font-size: .86rem; font-style: normal; }
+.stay-address address strong { display: inline-block; min-width: 58px; color: var(--ink); }
+.stay-actions { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+.stay-actions a { padding: 8px 10px; border-radius: 10px; color: var(--teal); background: var(--mint); font-size: .74rem; font-weight: 850; text-decoration: none; }
+.private-stay { border-style: dashed; background: rgba(255,255,255,.55); }
+.private-reminder { margin-top: 14px; padding: 11px 12px; border-radius: 11px; color: #76501c; background: #fff1d2; font-size: .8rem; }
+.safety-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 14px; }
+.safety-steps article { padding: 22px; border-radius: 18px; color: white; background: var(--teal-dark); }
+.safety-steps span { width: 34px; height: 34px; display: grid; place-items: center; margin-bottom: 28px; border-radius: 50%; color: var(--teal-dark); background: var(--mint); font-weight: 900; }
+.safety-steps h3 { margin-bottom: 7px; font-size: 1.25rem; }
+.safety-steps p { margin: 0; color: #dcefe8; font-size: .86rem; }
+.safety-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.safety-grid article { padding: 20px; border: 1px solid var(--line); border-radius: 17px; background: white; }
+.safety-grid h3 { margin-bottom: 10px; }
+.safety-grid ul, .tsunami-layout ol { margin: 0; padding-left: 19px; color: var(--muted); font-size: .84rem; }
+.safety-grid li + li, .tsunami-layout li + li { margin-top: 7px; }
+.tsunami-section { padding-top: 60px; padding-inline: clamp(16px, 4vw, 48px); border-radius: 28px; color: white; background: var(--teal-dark); }
+.tsunami-section .eyebrow { color: #b7dbce; }
+.tsunami-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.tsunami-layout p { color: #dcefe8; }
+.tsunami-layout aside { padding: 20px; border-radius: 17px; color: var(--ink); background: #fff8e9; }
+.tsunami-layout aside p, .tsunami-layout aside ol { color: var(--muted); }
+.siren-pattern { margin-bottom: 20px; display: flex; align-items: stretch; gap: 5px; }
+.siren-pattern strong, .siren-pattern i { padding: 14px 10px; display: grid; place-items: center; border-radius: 9px; font-size: .76rem; text-align: center; }
+.siren-pattern strong { flex: 1; color: #5c1515; background: #ffd0c8; }
+.siren-pattern i { flex: 1; color: var(--muted); background: white; font-style: normal; }
+.family-plan-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.family-plan-grid article { padding: 20px; border-top: 4px solid var(--teal); border-radius: 0 0 16px 16px; background: white; }
+.family-plan-grid span { color: var(--gold); font-family: Georgia, serif; font-size: 1.35rem; }
+.family-plan-grid h3 { margin: 18px 0 7px; font-size: 1rem; }
+.family-plan-grid p { margin: 0; color: var(--muted); font-size: .82rem; }
+.source-note { margin-top: 22px; color: var(--muted); font-size: .74rem; }
+.source-note a { color: var(--teal); font-weight: 800; }
+
 .split-section {
   display: grid;
   grid-template-columns: .7fr 1.3fr;
@@ -497,6 +553,7 @@
   .overview-map { grid-template-columns: 1fr; }
   .calendar-grid { grid-template-columns: repeat(2, 1fr); }
   .regional-map-grid { grid-template-columns: 1fr; }
+  .family-plan-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 .day-guide-table-wrap { overflow-x: auto; margin-bottom: 1rem; }
@@ -532,5 +589,6 @@
   .transport-status { grid-column: 2; }
   .regional-map-card { grid-template-columns: 1fr; }
   .regional-map-placeholder { min-height: 120px; }
+  .emergency-number-grid, .stay-directory, .safety-steps, .safety-grid, .tsunami-layout, .family-plan-grid { grid-template-columns: 1fr; }
+  .language-card { align-items: flex-start; flex-direction: column; }
 }
-
