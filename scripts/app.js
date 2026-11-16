@@ -37,6 +37,19 @@
       </details>`;
   };
   const renderDayGuides = (day) => [day.lunchGuide, day.dinnerGuide, ...(day.optionGuides || [])].filter(Boolean).map(renderGuide).join("");
+  const renderMorningTiming = (day) => {
+    const timing = data.morningTimings && data.morningTimings[day.day];
+    if (!timing) return "";
+    return `
+      <aside class="morning-timing" aria-label="Morning timing for day ${escapeHtml(day.day)}">
+        <div class="morning-timing-title"><span aria-hidden="true">⏰</span><strong>Morning timing</strong></div>
+        <div class="morning-timing-facts">
+          <span><small>Wake up</small><strong>${escapeHtml(timing.wake)}</strong></span>
+          <span><small>Leave / be ready</small><strong>${escapeHtml(timing.leave)}</strong></span>
+        </div>
+        <p>${escapeHtml(timing.reason)}</p>
+      </aside>`;
+  };
 
 
   byId("itinerary-list").innerHTML = data.itinerary.map((day) => `
@@ -44,6 +57,7 @@
       <div class="day-topline"><div><h3>${escapeHtml(day.title)} · ${escapeHtml(day.stay)}</h3><p class="day-date">${escapeHtml(day.date)}</p></div><span class="move-badge ${day.moving ? "" : "stay-badge"}">${day.moving ? "Moving day" : "Stay day"}</span></div>
       <div class="day-details"><p class="activity-line"><strong>Plan:</strong> ${escapeHtml(day.plan)}</p><div class="travel-box"><strong>${escapeHtml(day.travel)}</strong>${escapeHtml(day.note)}</div></div>
       ${renderDayGuides(day)}
+      ${renderMorningTiming(day)}
     </div></article>`).join("");
 
   const placeList = byId("place-list");
@@ -88,4 +102,5 @@
   menuButton.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuButton.setAttribute("aria-expanded", String(open)); });
   nav.addEventListener("click", () => { nav.classList.remove("open"); menuButton.setAttribute("aria-expanded", "false"); });
 })();
+
 
