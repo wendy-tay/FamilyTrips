@@ -53,7 +53,7 @@
 
 
   byId("itinerary-list").innerHTML = data.itinerary.map((day) => `
-    <article class="day-card"><div class="day-index">Day<strong>${day.day}</strong></div><div class="day-main">
+    <article class="day-card" id="day-${day.day}"><div class="day-index">Day<strong>${day.day}</strong></div><div class="day-main">
       <div class="day-topline"><div><h3>${escapeHtml(day.title)} · ${escapeHtml(day.stay)}</h3><p class="day-date">${escapeHtml(day.date)}</p></div><span class="move-badge ${day.moving ? "" : "stay-badge"}">${day.moving ? "Moving day" : "Stay day"}</span></div>
       <div class="day-details"><p class="activity-line"><strong>Plan:</strong> ${escapeHtml(day.plan)}</p><div class="travel-box"><strong>${escapeHtml(day.travel)}</strong>${escapeHtml(day.note)}</div></div>
       ${renderDayGuides(day)}
