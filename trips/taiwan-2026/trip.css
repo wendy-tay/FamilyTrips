@@ -119,6 +119,18 @@
 }
 
 .route-strip i { color: var(--gold); font-style: normal; }
+.route-strip a {
+  border-radius: 999px;
+  color: var(--teal-dark);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+.route-strip a:hover, .route-strip a:focus-visible {
+  color: #fff;
+  background: var(--teal-dark);
+  outline: none;
+  box-shadow: 0 0 0 5px var(--teal-dark);
+}
 
 .trip-section {
   width: min(1120px, calc(100% - 32px));
@@ -154,6 +166,7 @@
 }
 
 .day-card {
+  scroll-margin-top: 92px;
   position: relative;
   display: grid;
   grid-template-columns: 68px minmax(0, 1fr);
