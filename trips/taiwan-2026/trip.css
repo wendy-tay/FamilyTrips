@@ -648,6 +648,40 @@
   .family-plan-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Food discovery guide */
+.food-hero { background: linear-gradient(135deg, #f6e9c8 0%, #eef6f2 58%, #d6eadf 100%); }
+.food-key { align-self: stretch; padding: 24px; border: 1px solid rgba(13,78,71,.13); border-radius: 22px; background: rgba(255,255,255,.78); box-shadow: var(--shadow); }
+.food-key h2 { margin: 0 0 18px; font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; }
+.food-key p { display: grid; grid-template-columns: max-content 1fr; gap: 10px; align-items: start; margin: 0 0 13px; color: var(--muted); font-size: .82rem; }
+.food-key small { display: block; margin-top: 18px; color: var(--muted); line-height: 1.55; }
+.food-jump { position: sticky; top: 66px; z-index: 5; width: min(1120px, calc(100% - 32px)); margin: -48px auto 66px; padding: 10px; display: flex; gap: 8px; overflow-x: auto; border: 1px solid rgba(13,78,71,.12); border-radius: 18px; background: rgba(255,255,255,.94); box-shadow: 0 10px 30px rgba(23,50,45,.1); backdrop-filter: blur(12px); }
+.food-jump a { flex: 1 0 auto; padding: 9px 14px; border-radius: 12px; color: var(--teal-dark); background: var(--mint); text-align: center; font-size: .75rem; font-weight: 850; text-decoration: none; }
+.food-destination { scroll-margin-top: 130px; }
+.food-neighbourhood { margin: 30px 0 14px; padding-left: 14px; border-left: 4px solid var(--gold); }
+.food-neighbourhood h3 { margin: 0 0 4px; font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; font-weight: 600; }
+.food-neighbourhood p { margin: 0; color: var(--muted); font-size: .82rem; }
+.discovery-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+.discovery-card { position: relative; padding: 20px; border: 1px solid rgba(23,50,45,.09); border-radius: 19px; background: white; box-shadow: 0 10px 24px rgba(23,50,45,.05); }
+.discovery-card h3 { margin: 14px 0 7px; font-size: 1rem; }
+.discovery-card h3 a { color: var(--teal-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.discovery-card p { margin: 0 0 10px; color: var(--muted); font-size: .8rem; line-height: 1.55; }
+.discovery-card .food-meta { color: var(--teal); font-size: .71rem; font-weight: 850; text-transform: uppercase; letter-spacing: .035em; }
+.discovery-card .food-hours { margin: 13px 0 0; padding-top: 11px; border-top: 1px solid rgba(23,50,45,.09); color: #536a65; font-size: .74rem; }
+.discovery-card .food-hours.uncertain::before { content: "Verify: "; color: #a0602b; font-weight: 900; }
+.food-badge, .service-badge { display: inline-flex; align-items: center; min-height: 25px; padding: 4px 9px; border-radius: 999px; font-size: .65rem; font-weight: 900; letter-spacing: .02em; }
+.food-badge.priority { color: white; background: var(--teal-dark); }
+.food-badge.nearby { color: #173f39; background: #d6eadf; }
+.food-badge.optional { color: #74521b; background: #f5e6b8; }
+.confirmed-food { border-color: rgba(13,78,71,.28); background: linear-gradient(145deg, #fff, #eef7f3); }
+.takeaway-card { border-color: rgba(191,132,35,.28); background: linear-gradient(145deg, #fff, #fff8e8); }
+.service-badge { margin-left: 4px; color: #7b461f; background: #f8d9bd; }
+.inline-action { margin-top: 18px; padding: 18px; display: flex; align-items: center; gap: 18px; border-radius: 18px; background: var(--mint); }
+.inline-action p { margin: 0; color: var(--muted); font-size: .8rem; }
+
+@media (max-width: 860px) {
+  .discovery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
 .day-guide-table-wrap { overflow-x: auto; margin-bottom: 1rem; }
 .day-guide-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .9rem; line-height: 1.45; }
 .day-guide-table th, .day-guide-table td { padding: .75rem; border: 1px solid rgba(13, 78, 71, .16); text-align: left; vertical-align: top; }
@@ -695,5 +729,8 @@
   .cycle-route-line, .cycle-map::before, .cycle-map::after { display: none; }
   .cycle-stop { position: static; width: auto; }
   .language-card { align-items: flex-start; flex-direction: column; }
+  .food-jump { top: 58px; margin-top: -34px; }
+  .discovery-grid { grid-template-columns: 1fr; }
+  .inline-action { align-items: flex-start; flex-direction: column; }
 }
 
